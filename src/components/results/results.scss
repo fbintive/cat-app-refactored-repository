@@ -1,0 +1,101 @@
+.results {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 20px;
+  max-width: calc(100% - 420px);
+
+  &-placeholder {
+    font-size: 1.25rem;
+    font-style: italic;
+    padding: 10px;
+  }
+
+  &-fact {
+    font-size: 1.25rem;
+    overflow-wrap: break-word;
+    position: relative;
+    transition: all 0.1s;
+    padding: 10px;
+    padding-right: 80px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    text-align: left;
+
+    &:after {
+      position: absolute;
+      content: "Add";
+      color: white;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.25rem;
+      font-weight: 900;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transition: all 0.1s;
+      background-color: #03b1fc;
+    }
+
+    &.isLoading:after {
+      content: "";
+    }
+  }
+
+  &-requests {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &-button {
+      outline: none;
+      border: 3px solid blue;
+      border-radius: 4px;
+      background-color: blue;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      height: 50px;
+      width: 200px;
+      transition: all 0.1s;
+
+      &:hover {
+        outline: none;
+        background-color: white;
+        color: blue;
+        transition: all 0.1s;
+      }
+
+      &:disabled {
+        border: 3px solid grey;
+        background-color: lightgray;
+        color: black;
+        cursor: default;
+      }
+    }
+
+    &-loader {
+      width: 30px;
+      height: 30px;
+      border-top: 3px solid blue;
+      border-bottom: 3px solid blue;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      border-radius: 30px;
+      animation: spin 1s linear infinite;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

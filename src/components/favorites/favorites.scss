@@ -1,0 +1,66 @@
+.favoriteTab {
+  flex: 1;
+  width: 100%;
+  max-width: 400px;
+  height: fit-content;
+  max-height: calc(100vh - 155px);
+  border: 2px solid blue;
+  border-radius: 6px;
+
+  &-header {
+    width: 100%;
+    background-color: blue;
+    text-align: center;
+    padding: 20px;
+    height: 65px;
+
+    h2 {
+      font-size: 1.5rem;
+      color: white;
+    }
+  }
+
+  &-list {
+    padding: 10px;
+    max-height: calc(100% - 65px);
+    overflow-y: auto;
+  }
+}
+
+.favoriteFacts {
+  display: flex;
+  flex-direction: column;
+
+  i {
+    padding: 10px;
+    text-align: center;
+  }
+
+  &-fact {
+    position: relative;
+    transition: all 0.1s;
+    padding: 10px;
+    padding-right: 30px;
+    background-color: #fff;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    text-align: left;
+
+    &:after {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "X";
+      color: white;
+      font-weight: 900;
+    }
+
+    &:hover {
+      transition: all 0.3s;
+      cursor: pointer;
+      background-color: #f98282;
+    }
+  }
+}
