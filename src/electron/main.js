@@ -40,7 +40,7 @@ const createWindow = () => {
 };
 
 app.whenReady().then(() => {
-  const icon = nativeImage.createFromPath('src/assets/cat.png');
+  const icon = nativeImage.createFromPath('src/assets/cat_small.png');
   tray = new Tray(icon);
 
   const contextMenu = Menu.buildFromTemplate([
