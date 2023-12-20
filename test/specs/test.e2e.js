@@ -1,4 +1,5 @@
 // import { expect, $, browser } from '@wdio/globals';
+/* eslint-disable no-undef */
 require('@wdio/globals');
 
 describe('Electron Testing', () => {
@@ -9,3 +10,4 @@ describe('Electron Testing', () => {
     await expect($('h1')).toHaveTextContaining('Get you random daily cat fact');
   });
 });
+/* eslint-enable no-undef */
