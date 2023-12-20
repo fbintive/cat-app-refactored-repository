@@ -124,7 +124,8 @@ exports.config = {
   // Delay in seconds between the spec file retry attempts
   // specFileRetriesDelay: 0,
   //
-  // Whether or not retried spec files should be retried immediately or deferred to the end of the queue
+  // Whether or not retried spec files should be retried immediately or
+  // deferred to the end of the queue
   // specFileRetriesDeferred: false,
   //
   // Test reporter for stdout.
@@ -143,9 +144,11 @@ exports.config = {
   // =====
   // Hooks
   // =====
-  // WebdriverIO provides several hooks you can use to interfere with the test process in order to enhance
+  // WebdriverIO provides several hooks you can use to interfere
+  // with the test process in order to enhance
   // it and to build services around it. You can either apply a single function or an array of
-  // methods to it. If one of them returns with a promise, WebdriverIO will wait until that promise got
+  // methods to it. If one of them returns with a promise,
+  // WebdriverIO will wait until that promise got
   // resolved to continue.
   /**
      * Gets executed once before all workers get launched.
@@ -155,12 +158,15 @@ exports.config = {
   // onPrepare: function (config, capabilities) {
   // },
   /**
-     * Gets executed before a worker process is spawned and can be used to initialize specific service
+     * Gets executed before a worker process is spawned and can be used
+     * to initialize specific service
      * for that worker as well as modify runtime environments in an async fashion.
      * @param  {string} cid      capability id (e.g 0-0)
-     * @param  {object} caps     object containing capabilities for session that will be spawn in the worker
+     * @param  {object} caps     object containing capabilities for session
+     * that will be spawn in the worker
      * @param  {object} specs    specs to be run in the worker process
-     * @param  {object} args     object that will be merged with the main configuration once worker is initialized
+     * @param  {object} args     object that will be merged with the
+     * main configuration once worker is initialized
      * @param  {object} execArgv list of string arguments passed to the worker process
      */
   // onWorkerStart: function (cid, caps, specs, args, execArgv) {
@@ -175,7 +181,8 @@ exports.config = {
   // onWorkerEnd: function (cid, exitCode, specs, retries) {
   // },
   /**
-     * Gets executed just before initialising the webdriver session and test framework. It allows you
+     * Gets executed just before initialising the webdriver
+     * session and test framework. It allows you
      * to manipulate configurations depending on the capability or spec.
      * @param {object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
@@ -231,7 +238,8 @@ exports.config = {
      * @param {*}       result.result    return object of test function
      * @param {number}  result.duration  duration of test
      * @param {boolean} result.passed    true if test has passed, otherwise false
-     * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
+     * @param {object}  result.retries   information about spec related
+     * retries, e.g. `{ attempts: 0, limit: 0 }`
      */
   // afterTest: function(test, context, { error, result, duration, passed, retries }) {
   // },
@@ -293,7 +301,8 @@ exports.config = {
   // }
   /**
     * Hook that gets executed after a WebdriverIO assertion happened.
-    * @param {object} params information about the assertion that was executed, including its results
+    * @param {object} params information about the assertion
+    * that was executed, including its results
     */
   // afterAssertion: function(params) {
   // }
